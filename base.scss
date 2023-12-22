@@ -12,7 +12,6 @@ $gradient-soft: linear-gradient(42deg, #323264 14.33%, #323264 51.39%, #7A425E 8
 $gradient-red: linear-gradient(323deg, #F0145A 6.7%, #693264 70.36%);
 $gradient-super-soft: linear-gradient(229deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
 $gradient-red-text: linear-gradient(90deg, #F0145A 0.84%, #EF8080 99.96%);
-$gradient-text-red-reversed: linear-gradient(90deg, #EF8080 0.84%, #F0145A 99.96%);
 
 $active-regular: #24A3FF;
 $active-hover: #0085FF;
@@ -92,12 +91,13 @@ ol li {
   margin: 0 auto;
   padding: 0 30px;
   overflow-x: hidden;
+
   @media (min-width: 762px) {
     width: 1600px ;
     padding: 0 60px;
 
   }
-  @media (min-width: 1820px) {
+  @media (min-width: 1520px) {
     padding: 0 160px;
   }
 
@@ -116,8 +116,6 @@ header {
   left: 0;
   right: 0;
   z-index: 10;
-  max-width: 1600px;
-  margin: 0 auto;
 
   .contact-side {
     background-color: rgb(255 255 255 / 20%);
@@ -412,8 +410,12 @@ input[type=checkbox] {
   }
 }
 
-@media (min-width: 1820px) {
+@media (min-width: 1320px) {
   header {
+    padding: 50px 160px 0;
+    .logo{
+      left: 160px;
+    }
   }
 
 }
