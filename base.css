@@ -63,7 +63,7 @@ ol li {
 }
 
 .container {
-  width: 1600px;
+  max-width: 1920px ;
   margin: 0 auto;
   padding: 0 30px;
 }
@@ -83,9 +83,6 @@ ol li {
   flex-direction: column;
 }
 
-main {
-  background: linear-gradient(229deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
-}
 
 header {
   position: absolute;

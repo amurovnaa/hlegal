@@ -40,6 +40,12 @@ body {
 
 }
 
+.bg-gradient {
+  background: linear-gradient(229deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+  border-radius: 0 0 12px 12px;
+
+}
+
 
 h1 {
   font-size: 38px;
@@ -62,7 +68,7 @@ h3 {
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
-  text-align: center;
+  text-align: left;
 }
 
 h4 {
@@ -87,15 +93,13 @@ ol li {
 }
 
 .container {
-  width: 100%;
+
+  max-width: 1920px;
   margin: 0 auto;
   padding: 0 30px;
   overflow-x: hidden;
-
   @media (min-width: 762px) {
-    width: 1600px ;
     padding: 0 60px;
-
   }
   @media (min-width: 1520px) {
     padding: 0 160px;
@@ -107,7 +111,6 @@ ol li {
   display: flex;
   flex-direction: column;
 }
-
 
 
 header {
@@ -303,10 +306,7 @@ input[type=checkbox] {
   }
 
   img {
-    max-width: 100%;
-    min-width: 523px;
-    min-height: 600px;
-    max-height: 100%;
+
     position: relative;
     z-index: 1;
   }
@@ -413,7 +413,8 @@ input[type=checkbox] {
 @media (min-width: 1320px) {
   header {
     padding: 50px 160px 0;
-    .logo{
+
+    .logo {
       left: 160px;
     }
   }
