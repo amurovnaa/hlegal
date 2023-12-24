@@ -22,6 +22,10 @@ body {
   position: relative;
 }
 
+.bg-basic {
+  background: #F5F5FA;
+}
+
 h1 {
   font-size: 38px;
   font-weight: 700;
@@ -502,7 +506,7 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
   background: #FFF;
 }
 .section-team .slide {
-  margin-top: 60px;
+  margin: 60px 0 60px 0;
   display: flex;
   flex-direction: column;
   background: #F5F5FA;
@@ -541,6 +545,35 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
+}
+
+.companies {
+  background: #FFF;
+}
+.companies .container {
+  padding: 0;
+}
+.companies .grids {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+.companies .grids .grid {
+  height: 120px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 763px) {
+  .companies .grids {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 992px) {
+  .companies .grids {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 @media (min-width: 762px) {
