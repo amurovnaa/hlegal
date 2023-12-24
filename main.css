@@ -19,6 +19,7 @@ body {
 .bg-gradient {
   background: linear-gradient(229deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
   border-radius: 0 0 12px 12px;
+  position: relative;
 }
 
 h1 {
@@ -28,6 +29,7 @@ h1 {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  line-height: 1;
 }
 
 h2 {
@@ -64,6 +66,10 @@ ol li {
   font-size: 18px;
   font-weight: 400;
   line-height: 145%;
+}
+
+a:hover {
+  color: #F0145A;
 }
 
 .container {
@@ -429,7 +435,7 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
 
 .section-3 .line-1, .section-3 .line-2 {
   position: relative;
-  z-index: -1;
+  z-index: 1;
   top: 20px;
   margin: 0 auto;
   width: 97%;
@@ -496,6 +502,51 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
   line-height: 163%;
 }
 
+.section-team {
+  background: #FFF;
+}
+.section-team .slide {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  background: #F5F5FA;
+  border-radius: 12px;
+  height: 60%;
+}
+.section-team .slide img {
+  border-radius: 12px 12px 0 0;
+  width: 100%;
+  height: 100%;
+}
+.section-team .slide .slider-content {
+  padding: 30px;
+  border-radius: 12px;
+}
+.section-team .slide a {
+  color: #24A3FF;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.section-team .slide h1 {
+  font-size: 27px;
+  padding-bottom: 30px;
+}
+.section-team .slide h4 {
+  color: #B3B3BA;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: left;
+  padding-bottom: 6px;
+}
+.section-team .slide p {
+  color: #B3B3BA;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
 @media (min-width: 762px) {
   .section-tabs .content p:first-child {
     font-size: 30px;
@@ -505,6 +556,9 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
   }
   .section-tabs .tabs li {
     padding: 0 15px 60px;
+  }
+  .section-team .slider-content h1 {
+    font-size: 38px;
   }
 }
 @media (min-width: 992px) {
@@ -522,7 +576,7 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
   }
   .section-tabs .tabs li, .section-tabs .tabs li:first-child {
     font-size: 38px;
-    padding: 0 60px 60px 0;
+    padding: 0 60px 30px 0;
     text-align: right;
     border-bottom: none;
     border-right: 4px solid rgba(255, 255, 255, 0.3);
@@ -534,10 +588,53 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
   .section-3 .grids {
     grid-template-columns: repeat(3, 1fr);
   }
+  .section-team .slide {
+    display: flex;
+    flex-direction: row;
+  }
+  .section-team .slide .img {
+    width: 50%;
+  }
+  .section-team .slide .img img {
+    border-radius: 12px 0 0 12px;
+  }
+  .section-team .slide .slider-content {
+    display: flex;
+    flex-direction: column;
+    background: #F5F5FA;
+    padding: 30px;
+    width: 90%;
+  }
+  .section-team .slide a {
+    color: #24A3FF;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .section-team .slide h1 {
+    padding-bottom: 30px;
+  }
+  .section-team .slide h4 {
+    color: #B3B3BA;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: left;
+    padding-bottom: 6px;
+  }
+  .section-team .slide p {
+    color: #B3B3BA;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+  }
 }
-@media (min-width: 1320px) {
+@media (min-width: 1370px) {
   .section-tabs .content {
-    width: 60%;
+    width: 58%;
+  }
+  .section-team .slider .img {
+    width: 20%;
   }
 }
 

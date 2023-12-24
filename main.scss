@@ -109,7 +109,7 @@
 .section-3 {
   .line-1, .line-2 {
     position: relative;
-    z-index: -1;
+    z-index: 1;
     top: 20px;
     margin: 0 auto;
     width: 97%;
@@ -144,6 +144,7 @@
       line-height: 1;
     }
   }
+
   .grids {
     display: grid;
     gap: 30px;
@@ -187,6 +188,58 @@
   }
 }
 
+.section-team {
+  background: $basic-white;
+
+  .slide {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    background: $grey-bg;
+    border-radius: 12px;
+    height: 60%;
+
+    img {
+      border-radius: 12px 12px 0 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .slider-content {
+      padding: 30px;
+      border-radius: 12px;
+    }
+
+    a {
+      color: $active-regular;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: 27px;
+      padding-bottom: 30px;
+    }
+
+    h4 {
+      color: $grey-text;
+      font-size: 16px;
+      font-weight: 700;
+      text-align: left;
+      padding-bottom: 6px;
+    }
+
+    p {
+      color: $grey-text;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 22px;
+    }
+  }
+}
+
 
 @media (min-width: 762px) {
   .section-tabs {
@@ -195,10 +248,19 @@
         font-size: 30px;
       }
     }
+
     .tabs {
       gap: 60px;
+
       li {
         padding: 0 15px 60px;
+      }
+    }
+  }
+  .section-team {
+    .slider-content {
+      h1 {
+        font-size: 38px;
       }
     }
   }
@@ -221,7 +283,7 @@
 
       li, li:first-child {
         font-size: 38px;
-        padding: 0 60px 60px 0;
+        padding: 0 60px 30px 0;
         text-align: right;
         border-bottom: none;
         border-right: 4px solid rgb(255 255 255/ 30%);
@@ -238,15 +300,79 @@
       grid-template-columns: repeat(3, 1fr);
     }
   }
-}
 
-@media (min-width: 1320px) {
-  .section-tabs {
-    .content {
-      width: 60%;
+  .section-team {
+    .slide {
+
+      display: flex;
+      flex-direction: row;
+
+      .img {
+        width: 50%;
+
+        img {
+          border-radius: 12px 0 0 12px;
+        }
+      }
+
+      .slider-content {
+        display: flex;
+        flex-direction: column;
+        background: $grey-bg;
+        padding: 30px;
+        width: 90%;
+
+      }
+
+      a {
+        color: $active-regular;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        padding-bottom: 30px;
+      }
+
+      h4 {
+        color: $grey-text;
+        font-size: 16px;
+        font-weight: 700;
+        text-align: left;
+        padding-bottom: 6px;
+      }
+
+      p {
+        color: $grey-text;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22px;
+      }
     }
   }
+
 }
+
+@media (min-width: 1370px) {
+  .section-tabs {
+    .content {
+      width: 58%;
+    }
+
+  }
+  .section-team {
+    .slider {
+      .img {
+        width: 20%;
+      }
+    }
+  }
+
+}
+
+
 
 
 
