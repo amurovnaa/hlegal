@@ -68,10 +68,6 @@ ol li {
   line-height: 145%;
 }
 
-a:hover {
-  color: #F0145A;
-}
-
 .container {
   max-width: 1920px;
   margin: 0 auto;
@@ -582,7 +578,7 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
     border-right: 4px solid rgba(255, 255, 255, 0.3);
   }
   .section-tabs .content {
-    width: 42%;
+    width: 60%;
     gap: 0;
   }
   .section-3 .grids {
@@ -597,6 +593,7 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
   }
   .section-team .slide .img img {
     border-radius: 12px 0 0 12px;
+    height: 100%;
   }
   .section-team .slide .slider-content {
     display: flex;
@@ -611,6 +608,9 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
+  }
+  .section-team .slide a:hover {
+    color: #F0145A;
   }
   .section-team .slide h1 {
     padding-bottom: 30px;
@@ -629,7 +629,7 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
     line-height: 22px;
   }
 }
-@media (min-width: 1370px) {
+@media (min-width: 1520px) {
   .section-tabs .content {
     width: 58%;
   }

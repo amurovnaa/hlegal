@@ -291,7 +291,7 @@
     }
 
     .content {
-      width: 42%;
+      width: 60%;
       gap: 0;
     }
   }
@@ -312,6 +312,8 @@
 
         img {
           border-radius: 12px 0 0 12px;
+          height: 100%;
+
         }
       }
 
@@ -330,6 +332,10 @@
         font-weight: 700;
         letter-spacing: 1px;
         text-transform: uppercase;
+
+        &:hover {
+          color: $accent;
+        }
       }
 
       h1 {
@@ -355,7 +361,7 @@
 
 }
 
-@media (min-width: 1370px) {
+@media (min-width: 1520px) {
   .section-tabs {
     .content {
       width: 58%;
