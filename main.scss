@@ -216,6 +216,11 @@
       font-weight: 700;
       letter-spacing: 1px;
       text-transform: uppercase;
+
+      &:hover {
+        color: $accent;
+      }
+
     }
 
     h1 {
@@ -243,6 +248,11 @@
 .companies {
   background: $basic-white;
 
+  h3 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
   .container {
     padding: 0;
   }
@@ -268,6 +278,80 @@
     }
   }
 }
+
+.section-publications {
+
+  padding: 30px 0 0 0;
+
+  h3 {
+    color: $active-regular;
+  }
+
+  h1 {
+    padding-bottom: 30px;
+  }
+
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+
+
+    @media (min-width: 763px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 992px) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+  }
+
+  .card {
+    background: $basic-white;
+    border-radius: 0 0 8px 8px;
+
+    img {
+      border-radius: 8px 8px 0 0;
+      width: 100%;
+    }
+  }
+
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 30px;
+
+    p:first-of-type {
+      color: $grey-text;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    p {
+      color: $basic-black;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 157%;
+    }
+
+    hr {
+      background: $grey-separator;
+      height: 4px;
+      width: 100%;
+    }
+  }
+
+  h4 {
+    color: $active-regular;
+    text-align: left;
+  }
+
+}
+
 
 @media (min-width: 762px) {
   .section-tabs {
@@ -354,18 +438,6 @@
 
       }
 
-      a {
-        color: $active-regular;
-        font-size: 14px;
-        font-weight: 700;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-
-        &:hover {
-          color: $accent;
-        }
-      }
-
       h1 {
         padding-bottom: 30px;
       }
@@ -386,8 +458,8 @@
       }
     }
   }
-
 }
+
 
 @media (min-width: 1520px) {
   .section-tabs {

@@ -46,19 +46,23 @@ body {
   position: relative;
 
 }
-.bg-basic{
- background:$grey-bg;
+
+.bg-basic {
+  background: $grey-bg;
 
 }
 
 h1 {
-  font-size: 38px;
+  font-size: 30px;
   font-weight: 700;
   background: $gradient-red-text;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   line-height: 1;
+  @media (min-width: 762px) {
+    font-size: 38px;
+  }
 }
 
 h2 {
@@ -124,6 +128,7 @@ header {
   left: 0;
   right: 0;
   z-index: 10;
+  max-width: 1720px;
 
   .contact-side {
     background-color: rgb(255 255 255 / 20%);
@@ -258,6 +263,11 @@ header {
       padding: 4px 0;
       font-weight: 700;
     }
+
+    li:hover, li:active {
+      color: $accent;
+      border-bottom: solid 2px;
+    }
   }
 }
 
@@ -320,6 +330,88 @@ input[type=checkbox] {
   .container {
     display: flex;
     justify-content: center;
+  }
+}
+
+footer {
+  background: $grey-bg;
+  padding: 30px 0;
+
+  hr {
+    background: $grey-separator;
+    height: 2px;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .dot {
+    display: none;
+  }
+
+  .footer-right-side {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .address {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 21px;
+    align-items: center;
+
+    a {
+      color: $main-regular;
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    h3 {
+      color: $active-regular;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+  }
+
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+
+    svg {
+      path:hover {
+        fill: $accent;
+      }
+    }
+
+    h4 {
+      color: $main-alt;
+    }
+
+    h4:last-of-type {
+      color: $active-regular;
+
+      &:hover {
+        color: $accent;
+      }
+    }
+
+  }
+
+  .footer-left-side {
+    display: flex;
+    justify-content: center;
+
+    p {
+      color: $grey-text;
+      font-size: 16px;
+      font-weight: 400;
+    }
   }
 }
 
@@ -393,6 +485,49 @@ input[type=checkbox] {
         font-size: 16px;
         font-weight: 700;
       }
+
+      li:hover {
+        color: $accent;
+        border-bottom: solid 2px;
+      }
+
+    }
+  }
+
+  .footer-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .footer-right-side {
+      margin-bottom: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      .dot {
+        display: flex;
+        height: 6px;
+        width: 6px;
+        background-color: $grey-text;
+        border-radius: 50%;
+        align-self: center;
+      }
+
+      .address {
+        align-items: flex-start;
+        flex-direction: row;
+      }
+
+      .contacts {
+        align-items: flex-start;
+        flex-direction: row;
+      }
+    }
+
+    .footer-left-side {
+      justify-content: flex-end;
+
     }
   }
 }
@@ -401,6 +536,10 @@ input[type=checkbox] {
   header {
     .contact-side {
       justify-content: end;
+
+      .address {
+        color: $basic-white;
+      }
     }
 
     .side-menu {
@@ -415,18 +554,6 @@ input[type=checkbox] {
     }
   }
 }
-
-@media (min-width: 1320px) {
-  header {
-    padding: 50px 160px 0;
-
-    .logo {
-      left: 160px;
-    }
-  }
-
-}
-
 
 
 
