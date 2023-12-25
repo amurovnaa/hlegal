@@ -190,7 +190,11 @@
 
 .section-team {
   background: $basic-white;
-
+  .container{
+    @media (min-width: 1440px) {
+      padding: 0 160px;
+    }
+  }
   .slide {
     margin: 60px 0 60px 0;
     display: flex;
@@ -255,6 +259,9 @@
 
   .container {
     padding: 0;
+    @media (min-width: 1440px) {
+      padding: 0 100px;
+    }
   }
 
   .grids {

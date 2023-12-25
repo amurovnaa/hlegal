@@ -198,7 +198,10 @@ header {
   right: 15px;
   z-index: 5;
   cursor: pointer;
-
+  &:hover{
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.20);
+  }
   span {
     height: 2.5px;
     width: 30px;
@@ -266,7 +269,7 @@ header {
 
     li:hover, li:active {
       color: $accent;
-      border-bottom: solid 2px;
+
     }
   }
 }
@@ -290,13 +293,13 @@ input[type=checkbox] {
 
     span {
       &:before {
-        background: $accent;
+        background: #EC6F5D;
         transform: rotate(45deg) translate(7px, 7px);
         opacity: 1;
       }
 
       &:after {
-        background: $accent;
+        background: #EC6F5D;
         transform: rotate(-45deg) translate(7px, -7px);
       }
     }
