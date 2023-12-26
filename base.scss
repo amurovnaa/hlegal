@@ -236,7 +236,7 @@ header {
 
 #overlay-input:checked ~ .header-links {
   display: flex;
-  height: 55%;
+  height: 351px;
   background: $basic-white;
   position: fixed;
   width: 96%;
@@ -282,10 +282,8 @@ input[type=checkbox] {
 
   }
 
-  &:checked ~ #overlay-button {
-    position: absolute;
-    right: 5%;
-    top: 49vh;
+  &:checked ~ .header-links .overlay-close-button {
+
 
     &:hover span, span {
       background: transparent;

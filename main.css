@@ -194,7 +194,7 @@ header .side-menu span {
 }
 #overlay-input:checked ~ .header-links {
   display: flex;
-  height: 55%;
+  height: 351px;
   background: #FFF;
   position: fixed;
   width: 96%;
@@ -234,20 +234,15 @@ input[type=checkbox] {
 input[type=checkbox]:checked ~ #overlay {
   visibility: visible;
 }
-input[type=checkbox]:checked ~ #overlay-button {
-  position: absolute;
-  right: 5%;
-  top: 49vh;
-}
-input[type=checkbox]:checked ~ #overlay-button:hover span, input[type=checkbox]:checked ~ #overlay-button span {
+input[type=checkbox]:checked ~ .header-links .overlay-close-button:hover span, input[type=checkbox]:checked ~ .header-links .overlay-close-button span {
   background: transparent;
 }
-input[type=checkbox]:checked ~ #overlay-button span:before {
+input[type=checkbox]:checked ~ .header-links .overlay-close-button span:before {
   background: #EC6F5D;
   transform: rotate(45deg) translate(7px, 7px);
   opacity: 1;
 }
-input[type=checkbox]:checked ~ #overlay-button span:after {
+input[type=checkbox]:checked ~ .header-links .overlay-close-button span:after {
   background: #EC6F5D;
   transform: rotate(-45deg) translate(7px, -7px);
 }
@@ -462,8 +457,9 @@ footer .footer-left-side p {
 
 .section-1 {
   display: flex;
-  align-items: center;
+  align-items: end;
   justify-content: center;
+  margin-bottom: 60px;
 }
 .section-1 .container {
   display: flex;
@@ -475,7 +471,15 @@ footer .footer-left-side p {
 .section-1 .section-1-content {
   position: absolute;
   align-items: center;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 350px;
+  justify-content: space-between;
+}
+@media (min-width: 651px) {
+  .section-1 .section-1-content {
+    gap: 290px;
+  }
 }
 .section-1 .section-1-content h2 {
   color: #FFF;
@@ -485,7 +489,7 @@ footer .footer-left-side p {
   padding: 0 45px;
 }
 .section-1 .section-1-content svg {
-  position: absolute;
+  margin-bottom: 30px;
 }
 
 .section-tabs {
