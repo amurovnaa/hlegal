@@ -23,7 +23,6 @@
 	<title>Hlegal</title>
 	<link rel="icon" type="image/x-icon" href="">
 </head>
-
 <body>
 <main>
 	<div class="bg-gradient">
@@ -75,7 +74,7 @@
 							<li><a href="./ukr-lg.html">services</a></li>
 							<li><a href="#">team</a></li>
 							<li><a href="#">publications</a></li>
-							<li><a href="#">contact</a></li>
+							<li><a href="./contact_page.html">contact</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -201,44 +200,50 @@
 					<div class="slider">
 						
 						<div class="slide">
-							<div class="img"><img src="./img/person_1.png" alt="photo">
+							<div class="flex">
+								<img src="./img/person_1.png" alt="photo">
+								<div class="slider-content">
+									<h3><a href="#">команда ></a></h3>
+									<h1>Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну
+										допомогу, навіть у ситуаціях, коли більшість безсилі.</h1>
+									<h4>Олександр Олександровський</h4>
+									<p>Керуючий партнер</p>
+								</div>
 							</div>
-							<div class="slider-content">
-								<h3><a href="#">команда ></a></h3>
-								<h1>Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну
-									допомогу, навіть у ситуаціях, коли більшість безсилі.</h1>
-								<h4>Олександр Олександровський</h4>
-								<p>Керуючий партнер</p>
-							</div>
+						
 						</div>
 						
 						
 						<div class="slide">
-							<div class="img"><img src="./img/Team-4.png" alt="photo">
+							<div class="flex">
+								<img src="./img/Team-4.png" alt="photo">
+								<div class="slider-content">
+									<a href="#">команда ></a>
+									<h1>Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну
+										допомогу, навіть у ситуаціях, коли більшість безсилі.</h1>
+									<h4>Андрій Олександровський</h4>
+									<p>Керуючий партнер</p>
+								</div>
 							</div>
-							<div class="slider-content">
-								<a href="#">команда ></a>
-								<h1>Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну
-									допомогу, навіть у ситуаціях, коли більшість безсилі.</h1>
-								<h4>Андрій Олександровський</h4>
-								<p>Керуючий партнер</p>
-							</div>
+						
 						</div>
 						<div class="slide">
-							<div class="img"><img src="./img/Team-5.png" alt="photo">
+							<div class="flex">
+								<img src="./img/Team-5.png" alt="photo">
+								<div class="slider-content">
+									<a href="#">команда ></a>
+									<h1>Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну
+										допомогу, навіть у ситуаціях, коли більшість безсилі.</h1>
+									<h4>Олександрa Євгенівна</h4>
+									<p>Керуючий партнер</p>
+								</div>
 							</div>
-							<div class="slider-content">
-								<a href="#">команда ></a>
-								<h1>Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну
-									допомогу, навіть у ситуаціях, коли більшість безсилі.</h1>
-								<h4>Олександрa Євгенівна</h4>
-								<p>Керуючий партнер</p>
-							</div>
+						
 						</div>
 					</div>
 				</div>
-				
-				
+			
+			
 			</section>
 			<section class="companies">
 				<div class="container">
@@ -358,13 +363,13 @@
 						</div>
 					
 					</div>
-					
+				
 				</div>
 			</footer>
 		</div>
 	</div>
-	
-	
+
+
 </main>
 
 <script
@@ -377,7 +382,13 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
 	$(document).ready(function () {
-		$('.slider').slick({});
+		$('.slider').slick({
+			dots: true,
+			infinite: true,
+			speed: 300,
+			slidesToShow: 1,
+			adaptiveHeight: true
+		});
 		$(".tabs").tabs();
 	});
 </script>

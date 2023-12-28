@@ -234,7 +234,7 @@ input[type=checkbox]:checked ~ #overlay {
 }
 
 input[type=checkbox]:checked ~ #overlay-button {
-  
+
 }
 
 input[type=checkbox]:checked ~ #overlay-button:hover span, input[type=checkbox]:checked ~ #overlay-button span {

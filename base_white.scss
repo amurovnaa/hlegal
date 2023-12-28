@@ -36,19 +36,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   line-height: 163%;
-  color: $basic-black;
-
-}
-
-.bg-gradient {
-  background: linear-gradient(229deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
-  border-radius: 0 0 12px 12px;
-  position: relative;
-
-}
-
-.bg-basic {
-  background: $grey-bg;
+  color: $basic-white;
 
 }
 
@@ -128,6 +116,7 @@ header {
   left: 0;
   right: 0;
   z-index: 10;
+  margin: 0 auto;
   max-width: 1720px;
 
   .contact-side {
@@ -137,6 +126,11 @@ header {
     justify-content: space-between;
     text-align: center;
     align-content: center;
+
+    a {
+      color: $grey-text;
+    }
+
 
     .dot, .address, svg {
       display: none;
@@ -182,12 +176,17 @@ header {
       height: 32px;
     }
 
+    .page-name {
+      display: flex;
+      flex-direction: row;
+    }
 
     span {
       display: flex;
-      color: $basic-white;
+      color: $main-regular;
       font-size: 20px;
       font-weight: 400;
+
     }
   }
 }
@@ -207,7 +206,7 @@ header {
   span {
     height: 2.5px;
     width: 30px;
-    background-color: $basic-white;
+    background-color: $main-regular;
     position: relative;
     display: block;
     transition: all .2s ease-in-out;
@@ -224,7 +223,7 @@ header {
     &:before, &:after {
       height: 3px;
       width: 30px;
-      background-color: $basic-white;
+      background-color: $main-regular;
       position: absolute;
       content: "";
       transition: all .2s ease-in-out;
@@ -306,35 +305,39 @@ input[type=checkbox] {
   }
 }
 
+.section-contact {
+  margin-top: 175px;
 
-.first {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 600px;
-  max-height: 100%;
-  overflow-x: hidden;
+  .contact-links {
+    a {
+      color: $main-regular;
+      font-size: 21px;
+      font-weight: 400;
+      line-height: 30px;
+    }
 
-  h2 {
-    color: $basic-white;
-    text-align: center;
-    font-size: 38px;
-    line-height: 1;
-    position: absolute;
-    z-index: 2;
-  }
+    a:last-of-type {
+      color: $active-regular;
+    }
 
-  img {
+    hr {
+      height: 4px;
+      background-color: $grey-separator
+    }
 
-    position: relative;
-    z-index: 1;
-  }
-
-  .container {
-    display: flex;
-    justify-content: center;
+    text {
+      color: var(--Active-Regular, #24A3FF);
+      font-family: Montserrat;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 16px; /* 133.333% */
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
   }
 }
+
 
 footer {
   background: $grey-bg;
@@ -439,7 +442,7 @@ footer {
       .dot {
         height: 6px;
         width: 6px;
-        background-color: $basic-white;
+        background-color: $grey-separator;
         border-radius: 50%;
         align-self: center;
       }
@@ -457,14 +460,21 @@ footer {
       align-items: flex-start;
       gap: 30px;
 
+      .page-name {
+        position: absolute;
+        bottom: 75px;
+        left: 195px
+      }
+
       .logo {
         width: 130px;
         height: 60px;
-      }
-    }
 
-    span:last-of-type {
-      display: none;
+        .page-name {
+          display: flex;
+          flex-direction: row;
+        }
+      }
     }
 
 
@@ -484,7 +494,7 @@ footer {
 
       li {
         list-style-type: none;
-        color: $basic-white;
+        color: $active-regular;
         font-size: 16px;
         font-weight: 700;
       }
@@ -540,20 +550,21 @@ footer {
     .contact-side {
       justify-content: end;
 
-      .address {
-        color: $basic-white;
-      }
     }
 
     .side-menu {
       padding: 16px 0 0 0;
       align-items: end;
-    }
 
-    .logo {
-      position: absolute;
-      top: 50px;
-      left: 60px;
+      .page-name {
+        bottom: 25px;
+      }
+
+      .logo {
+        position: absolute;
+        top: 50px;
+        left: 60px;
+      }
     }
   }
 }
