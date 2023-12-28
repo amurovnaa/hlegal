@@ -90,7 +90,6 @@ ol li {
 }
 
 .container {
-
   max-width: 1920px;
   margin: 0 auto;
   padding: 0 30px;
@@ -305,40 +304,6 @@ input[type=checkbox] {
   }
 }
 
-.section-contact {
-  margin-top: 175px;
-
-  .contact-links {
-    a {
-      color: $main-regular;
-      font-size: 21px;
-      font-weight: 400;
-      line-height: 30px;
-    }
-
-    a:last-of-type {
-      color: $active-regular;
-    }
-
-    hr {
-      height: 4px;
-      background-color: $grey-separator
-    }
-
-    text {
-      color: var(--Active-Regular, #24A3FF);
-      font-family: Montserrat;
-      font-size: 12px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 16px; /* 133.333% */
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
-  }
-}
-
-
 footer {
   background: $grey-bg;
   padding: 30px 0;
@@ -506,42 +471,42 @@ footer {
 
     }
   }
+}
 
-  .footer-flex {
+.footer-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .footer-right-side {
+    margin-bottom: 0;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
 
-    .footer-right-side {
-      margin-bottom: 0;
+    .dot {
       display: flex;
-      flex-direction: column;
+      height: 6px;
+      width: 6px;
+      background-color: $grey-text;
+      border-radius: 50%;
+      align-self: center;
+    }
+
+    .address {
       align-items: flex-start;
-
-      .dot {
-        display: flex;
-        height: 6px;
-        width: 6px;
-        background-color: $grey-text;
-        border-radius: 50%;
-        align-self: center;
-      }
-
-      .address {
-        align-items: flex-start;
-        flex-direction: row;
-      }
-
-      .contacts {
-        align-items: flex-start;
-        flex-direction: row;
-      }
+      flex-direction: row;
     }
 
-    .footer-left-side {
-      justify-content: flex-end;
-
+    .contacts {
+      align-items: flex-start;
+      flex-direction: row;
     }
+  }
+
+  .footer-left-side {
+    justify-content: flex-end;
+
   }
 }
 

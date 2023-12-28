@@ -245,33 +245,6 @@ input[type=checkbox]:checked ~ .header-links .overlay-close-button span:after {
   transform: rotate(-45deg) translate(7px, -7px);
 }
 
-.section-contact {
-  margin-top: 175px;
-}
-.section-contact .contact-links a {
-  color: #323264;
-  font-size: 21px;
-  font-weight: 400;
-  line-height: 30px;
-}
-.section-contact .contact-links a:last-of-type {
-  color: #24A3FF;
-}
-.section-contact .contact-links hr {
-  height: 4px;
-  background-color: #E6E6F0;
-}
-.section-contact .contact-links text {
-  color: var(--Active-Regular, #24A3FF);
-  font-family: Montserrat;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 16px; /* 133.333% */
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
 footer {
   background: #F5F5FA;
   padding: 30px 0;
@@ -407,37 +380,38 @@ footer .footer-left-side p {
     color: #F0145A;
     border-bottom: solid 2px;
   }
-  .footer-flex {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  .footer-flex .footer-right-side {
-    margin-bottom: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .footer-flex .footer-right-side .dot {
-    display: flex;
-    height: 6px;
-    width: 6px;
-    background-color: #B3B3BA;
-    border-radius: 50%;
-    align-self: center;
-  }
-  .footer-flex .footer-right-side .address {
-    align-items: flex-start;
-    flex-direction: row;
-  }
-  .footer-flex .footer-right-side .contacts {
-    align-items: flex-start;
-    flex-direction: row;
-  }
-  .footer-flex .footer-left-side {
-    justify-content: flex-end;
-  }
 }
+.footer-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.footer-flex .footer-right-side {
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.footer-flex .footer-right-side .dot {
+  display: flex;
+  height: 6px;
+  width: 6px;
+  background-color: #B3B3BA;
+  border-radius: 50%;
+  align-self: center;
+}
+.footer-flex .footer-right-side .address {
+  align-items: flex-start;
+  flex-direction: row;
+}
+.footer-flex .footer-right-side .contacts {
+  align-items: flex-start;
+  flex-direction: row;
+}
+.footer-flex .footer-left-side {
+  justify-content: flex-end;
+}
+
 @media (min-width: 992px) {
   header .contact-side {
     justify-content: end;
@@ -456,4 +430,4 @@ footer .footer-left-side p {
   }
 }
 
-/*# sourceMappingURL=base_white.css.map */
+/*# sourceMappingURL=base_white_header.css.map */
