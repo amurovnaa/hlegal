@@ -1,0 +1,169 @@
+$basic-white: #FFF;
+$basic-black: #000;
+
+$grey-bg: #F5F5FA;
+$grey-bg-alt: #EDEDF7;
+$grey-text: #B3B3BA;
+$grey-separator: #E6E6F0;
+$accent: #F0145A;
+
+
+$active-regular: #24A3FF;
+$active-hover: #0085FF;
+$active-active: #006CCF;
+$main-regular: #323264;
+$main-alt: #46466E;
+$main-soft: #686887;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  font: inherit;
+  color: inherit;
+}
+
+
+footer {
+  background: $grey-bg;
+  padding: 30px 0;
+
+  hr {
+    background: $grey-separator;
+    height: 2px;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .dot {
+    display: none;
+  }
+
+  .footer-right-side {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .address {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 21px;
+    align-items: center;
+
+    a {
+      color: $main-regular;
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    h3 {
+      color: $active-regular;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+  }
+
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+
+    svg {
+      path:hover {
+        fill: $accent;
+      }
+    }
+
+    h4 {
+      color: $main-alt;
+    }
+
+    h4:last-of-type {
+      color: $active-regular;
+
+      &:hover {
+        color: $accent;
+      }
+    }
+
+  }
+
+  .footer-left-side {
+    display: flex;
+    justify-content: center;
+
+    p {
+      color: $grey-text;
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
+}
+
+@media (min-width: 762px) {
+  .footer-flex {
+    flex-direction: row;
+
+    .footer-right-side {
+      .address, .contacts {
+        flex-direction: row;
+        justify-content: start;
+        width: 400px;
+
+      }
+
+      .dot {
+        display: flex;
+        height: 6px;
+        width: 6px;
+        background-color: $grey-text;
+        border-radius: 50%;
+        align-self: center;
+      }
+
+    }
+  }
+}
+
+
+@media (min-width: 992px) {
+
+  .footer-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .footer-right-side {
+      margin-bottom: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+
+      .address {
+        align-items: flex-start;
+        flex-direction: row;
+      }
+
+      .contacts {
+        align-items: flex-start;
+        flex-direction: row;
+      }
+    }
+
+    .footer-left-side {
+      justify-content: flex-end;
+
+    }
+  }
+}

@@ -272,6 +272,98 @@ input[type=checkbox]:checked ~ .header-links .overlay-close-button span:after {
   justify-content: center;
 }
 
+@media (min-width: 762px) {
+  header {
+    padding: 50px 60px 0;
+  }
+  header #overlay-button {
+    display: none;
+  }
+  header .contact-side {
+    background-color: unset;
+    padding: 0;
+    justify-content: left;
+    gap: 6px;
+  }
+  header .contact-side .dot, header .contact-side .address, header .contact-side svg {
+    display: flex;
+  }
+  header .contact-side .dot {
+    height: 6px;
+    width: 6px;
+    background-color: #FFF;
+    border-radius: 50%;
+    align-self: center;
+  }
+  header .contact-side .address {
+    color: #B3B3BA;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  header .side-menu {
+    padding: 30px 0 0 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+  header .side-menu .logo {
+    width: 130px;
+    height: 60px;
+  }
+  header span:last-of-type {
+    display: none;
+  }
+  header .header-links {
+    display: flex;
+    position: relative;
+    padding-top: 0;
+    height: auto;
+    width: auto;
+    background: none;
+  }
+  header .header-links .flex {
+    flex-direction: row;
+    gap: 15px;
+  }
+  header .header-links li {
+    list-style-type: none;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  header .header-links li:hover {
+    color: #F0145A;
+    border-bottom: solid 2px;
+  }
+}
+@media (min-width: 992px) {
+  header .contact-side {
+    justify-content: end;
+  }
+  header .contact-side .address {
+    color: #FFF;
+  }
+  header .side-menu {
+    padding: 16px 0 0 0;
+    align-items: end;
+  }
+  header .logo {
+    position: absolute;
+    top: 50px;
+    left: 60px;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  font: inherit;
+  color: inherit;
+}
+
 footer {
   background: #F5F5FA;
   padding: 30px 0;
@@ -339,68 +431,24 @@ footer .footer-left-side p {
 }
 
 @media (min-width: 762px) {
-  header {
-    padding: 50px 60px 0;
+  .footer-flex {
+    flex-direction: row;
   }
-  header #overlay-button {
-    display: none;
+  .footer-flex .footer-right-side .address, .footer-flex .footer-right-side .contacts {
+    flex-direction: row;
+    justify-content: start;
+    width: 400px;
   }
-  header .contact-side {
-    background-color: unset;
-    padding: 0;
-    justify-content: left;
-    gap: 6px;
-  }
-  header .contact-side .dot, header .contact-side .address, header .contact-side svg {
+  .footer-flex .footer-right-side .dot {
     display: flex;
-  }
-  header .contact-side .dot {
     height: 6px;
     width: 6px;
-    background-color: #FFF;
+    background-color: #B3B3BA;
     border-radius: 50%;
     align-self: center;
   }
-  header .contact-side .address {
-    color: #B3B3BA;
-    font-size: 16px;
-    font-weight: 400;
-  }
-  header .side-menu {
-    padding: 30px 0 0 0;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 30px;
-  }
-  header .side-menu .logo {
-    width: 130px;
-    height: 60px;
-  }
-  header span:last-of-type {
-    display: none;
-  }
-  header .header-links {
-    display: flex;
-    position: relative;
-    padding-top: 0;
-    height: auto;
-    width: auto;
-    background: none;
-  }
-  header .header-links .flex {
-    flex-direction: row;
-    gap: 15px;
-  }
-  header .header-links li {
-    list-style-type: none;
-    color: #FFF;
-    font-size: 16px;
-    font-weight: 700;
-  }
-  header .header-links li:hover {
-    color: #F0145A;
-    border-bottom: solid 2px;
-  }
+}
+@media (min-width: 992px) {
   .footer-flex {
     display: flex;
     flex-direction: row;
@@ -412,14 +460,6 @@ footer .footer-left-side p {
     flex-direction: column;
     align-items: flex-start;
   }
-  .footer-flex .footer-right-side .dot {
-    display: flex;
-    height: 6px;
-    width: 6px;
-    background-color: #B3B3BA;
-    border-radius: 50%;
-    align-self: center;
-  }
   .footer-flex .footer-right-side .address {
     align-items: flex-start;
     flex-direction: row;
@@ -430,23 +470,6 @@ footer .footer-left-side p {
   }
   .footer-flex .footer-left-side {
     justify-content: flex-end;
-  }
-}
-@media (min-width: 992px) {
-  header .contact-side {
-    justify-content: end;
-  }
-  header .contact-side .address {
-    color: #FFF;
-  }
-  header .side-menu {
-    padding: 16px 0 0 0;
-    align-items: end;
-  }
-  header .logo {
-    position: absolute;
-    top: 50px;
-    left: 60px;
   }
 }
 .gradient-red-reversed, .section-tabs .tabs li.ui-tabs-active {

@@ -36,7 +36,19 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   line-height: 163%;
-  color: $basic-white;
+  color: $basic-black;
+
+}
+
+.bg-gradient {
+  background: linear-gradient(229deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+  border-radius: 0 0 12px 12px;
+  position: relative;
+
+}
+
+.bg-basic {
+  background: $grey-bg;
 
 }
 
@@ -90,6 +102,7 @@ ol li {
 }
 
 .container {
+
   max-width: 1920px;
   margin: 0 auto;
   padding: 0 30px;
@@ -115,7 +128,6 @@ header {
   left: 0;
   right: 0;
   z-index: 10;
-  margin: 0 auto;
   max-width: 1720px;
 
   .contact-side {
@@ -125,11 +137,6 @@ header {
     justify-content: space-between;
     text-align: center;
     align-content: center;
-
-    a {
-      color: $grey-text;
-    }
-
 
     .dot, .address, svg {
       display: none;
@@ -175,17 +182,12 @@ header {
       height: 32px;
     }
 
-    .page-name {
-      display: flex;
-      flex-direction: row;
-    }
 
     span {
       display: flex;
-      color: $main-regular;
+      color: $basic-white;
       font-size: 20px;
       font-weight: 400;
-
     }
   }
 }
@@ -205,7 +207,7 @@ header {
   span {
     height: 2.5px;
     width: 30px;
-    background-color: $main-regular;
+    background-color: $basic-white;
     position: relative;
     display: block;
     transition: all .2s ease-in-out;
@@ -222,7 +224,7 @@ header {
     &:before, &:after {
       height: 3px;
       width: 30px;
-      background-color: $main-regular;
+      background-color: $basic-white;
       position: absolute;
       content: "";
       transition: all .2s ease-in-out;
@@ -304,85 +306,33 @@ input[type=checkbox] {
   }
 }
 
-footer {
-  background: $grey-bg;
-  padding: 30px 0;
 
-  hr {
-    background: $grey-separator;
-    height: 2px;
-    width: 100%;
-    margin-bottom: 30px;
+.first {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 600px;
+  max-height: 100%;
+  overflow-x: hidden;
+
+  h2 {
+    color: $basic-white;
+    text-align: center;
+    font-size: 38px;
+    line-height: 1;
+    position: absolute;
+    z-index: 2;
   }
 
-  .dot {
-    display: none;
+  img {
+
+    position: relative;
+    z-index: 1;
   }
 
-  .footer-right-side {
-    margin-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .address {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 21px;
-    align-items: center;
-
-    a {
-      color: $main-regular;
-      font-size: 16px;
-      font-weight: 400;
-    }
-
-    h3 {
-      color: $active-regular;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
-  }
-
-  .contacts {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-
-    svg {
-      path:hover {
-        fill: $accent;
-      }
-    }
-
-    h4 {
-      color: $main-alt;
-    }
-
-    h4:last-of-type {
-      color: $active-regular;
-
-      &:hover {
-        color: $accent;
-      }
-    }
-
-  }
-
-  .footer-left-side {
+  .container {
     display: flex;
     justify-content: center;
-
-    p {
-      color: $grey-text;
-      font-size: 16px;
-      font-weight: 400;
-    }
   }
 }
 
@@ -407,7 +357,7 @@ footer {
       .dot {
         height: 6px;
         width: 6px;
-        background-color: $grey-separator;
+        background-color: $basic-white;
         border-radius: 50%;
         align-self: center;
       }
@@ -425,21 +375,14 @@ footer {
       align-items: flex-start;
       gap: 30px;
 
-      .page-name {
-        position: absolute;
-        bottom: 75px;
-        left: 195px
-      }
-
       .logo {
         width: 130px;
         height: 60px;
-
-        .page-name {
-          display: flex;
-          flex-direction: row;
-        }
       }
+    }
+
+    span:last-of-type {
+      display: none;
     }
 
 
@@ -459,7 +402,7 @@ footer {
 
       li {
         list-style-type: none;
-        color: $active-regular;
+        color: $basic-white;
         font-size: 16px;
         font-weight: 700;
       }
@@ -473,63 +416,25 @@ footer {
   }
 }
 
-.footer-flex {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-
-  .footer-right-side {
-    margin-bottom: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-
-    .dot {
-      display: flex;
-      height: 6px;
-      width: 6px;
-      background-color: $grey-text;
-      border-radius: 50%;
-      align-self: center;
-    }
-
-    .address {
-      align-items: flex-start;
-      flex-direction: row;
-    }
-
-    .contacts {
-      align-items: flex-start;
-      flex-direction: row;
-    }
-  }
-
-  .footer-left-side {
-    justify-content: flex-end;
-
-  }
-}
-
 @media (min-width: 992px) {
   header {
     .contact-side {
       justify-content: end;
 
+      .address {
+        color: $basic-white;
+      }
     }
 
     .side-menu {
       padding: 16px 0 0 0;
       align-items: end;
+    }
 
-      .page-name {
-        bottom: 25px;
-      }
-
-      .logo {
-        position: absolute;
-        top: 50px;
-        left: 60px;
-      }
+    .logo {
+      position: absolute;
+      top: 50px;
+      left: 60px;
     }
   }
 }
