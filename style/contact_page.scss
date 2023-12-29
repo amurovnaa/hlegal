@@ -20,7 +20,6 @@ body {
   color: $basic-black;
 
 }
-
 .section-contact {
   margin-top: 133px;
   @media (min-width: 762px) {
@@ -90,17 +89,20 @@ body {
       height: 38px;
       align-items: center;
     }
+  }
+  text {
+    color: $active-regular;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    width: 105px;
+    cursor: pointer;
 
-    text {
-      color: $active-regular;
-      font-size: 12px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 16px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      width: 105px;
-
+    &:hover {
+      color: $accent;
     }
   }
 }
@@ -144,12 +146,29 @@ form {
     line-height: 26px;
     margin-bottom: 15px;
     border-radius: 8px;
-    border: $basic-white;
     background: $basic-white;
+    border: 1px solid $basic-white;
+    &:disabled{
+      border-radius: 8px;
+      border: 1px solid $grey-bg-alt;
+      background: $grey-bg-alt;
+    }
+    &:focus{
+      border-radius: 8px;
+      border: 1px solid $active-regular;
+      color: $basic-black;
+    }
+    &:invalid{
+      border-radius: 8px;
+      border: 1px solid #F00;
+      color: #F00;
+    }
+
   }
 
   textarea {
     height: 130px;
+    width: 100%;
   }
 
   .caps {
@@ -181,6 +200,16 @@ form {
     box-shadow: 0 0 20px 0 rgba(36, 163, 255, 0.50);
     width: 100%;
     margin-top: 15px;
+    cursor: pointer;
+    &:hover{
+      background:$active-hover;
+    }
+    &:active{
+      background:$active-active;
+    }
+    &::-moz-progress-bar{
+      background:$active-active;
+    }
   }
 }
 

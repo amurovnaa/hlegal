@@ -123,7 +123,7 @@ header {
   z-index: 10;
   margin: 0 auto;
   max-width: 1720px;
-
+background-color: $basic-white;
   .contact-side {
     background-color: rgb(255 255 255 / 20%);
     padding: 10px 15px;
@@ -154,6 +154,10 @@ header {
 
       &:hover {
         background: $accent;
+
+        a {
+          color: $basic-white;
+        }
       }
     }
 
