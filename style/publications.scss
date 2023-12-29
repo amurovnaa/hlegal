@@ -80,7 +80,7 @@ header {
         background: transparent;
         cursor: pointer;
 
-        &:active {
+        &:active, &:hover {
           border-radius: 10px;
           background: $basic-white;
         }

@@ -391,12 +391,12 @@ footer .address {
   margin-bottom: 21px;
   align-items: center;
 }
-footer .address a {
+footer .address p {
   color: #323264;
   font-size: 16px;
   font-weight: 400;
 }
-footer .address h3 {
+footer .address a {
   color: #24A3FF;
   font-size: 12px;
   font-weight: 700;
@@ -770,7 +770,11 @@ footer .footer-left-side p {
   padding: 30px 0 0 0;
 }
 .section-publications h3 {
+  cursor: pointer;
   color: #24A3FF;
+}
+.section-publications h3:hover {
+  color: #F0145A;
 }
 .section-publications h1 {
   padding-bottom: 30px;
@@ -826,6 +830,10 @@ footer .footer-left-side p {
 .section-publications h4 {
   color: #24A3FF;
   text-align: left;
+  cursor: pointer;
+}
+.section-publications h4:hover {
+  color: #F0145A;
 }
 
 @media (min-width: 762px) {

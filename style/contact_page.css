@@ -378,12 +378,12 @@ footer .address {
   margin-bottom: 21px;
   align-items: center;
 }
-footer .address a {
+footer .address p {
   color: #323264;
   font-size: 16px;
   font-weight: 400;
 }
-footer .address h3 {
+footer .address a {
   color: #24A3FF;
   font-size: 12px;
   font-weight: 700;

@@ -20,6 +20,7 @@ body {
   color: $basic-black;
 
 }
+
 .section-contact {
   margin-top: 133px;
   @media (min-width: 762px) {
@@ -90,6 +91,7 @@ body {
       align-items: center;
     }
   }
+
   text {
     color: $active-regular;
     font-size: 12px;
@@ -148,17 +150,20 @@ form {
     border-radius: 8px;
     background: $basic-white;
     border: 1px solid $basic-white;
-    &:disabled{
+
+    &:disabled {
       border-radius: 8px;
       border: 1px solid $grey-bg-alt;
       background: $grey-bg-alt;
     }
-    &:focus{
+
+    &:focus {
       border-radius: 8px;
       border: 1px solid $active-regular;
       color: $basic-black;
     }
-    &:invalid{
+
+    &:invalid {
       border-radius: 8px;
       border: 1px solid #F00;
       color: #F00;
@@ -185,7 +190,7 @@ form {
   }
 
   .form-btn {
-    color:$basic-white;
+    color: $basic-white;
     text-align: center;
     font-size: 16px;
     font-weight: 700;
@@ -201,14 +206,17 @@ form {
     width: 100%;
     margin-top: 15px;
     cursor: pointer;
-    &:hover{
-      background:$active-hover;
+
+    &:hover {
+      background: $active-hover;
     }
-    &:active{
-      background:$active-active;
+
+    &:active {
+      background: $active-active;
     }
-    &::-moz-progress-bar{
-      background:$active-active;
+
+    &::-moz-progress-bar {
+      background: $active-active;
     }
   }
 }
