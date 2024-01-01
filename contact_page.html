@@ -19,6 +19,7 @@
 	      crossorigin="anonymous" referrerpolicy="no-referrer"/>
 	
 	<link rel="stylesheet" href="style/contact_page.css">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	
 	<title>contact</title>
 </head>
@@ -40,24 +41,25 @@
 			<span class="dot"></span>
 			<h4><a href="tel:+3806600211927">066 021 1927</a></h4>
 			<span class="dot"></span>
-			<svg width="24" height="24">
-				<use xlink:href="./svg/sprite.svg#facebook-grey"></use>
-			</svg>
+			<a href="https://uk-ua.facebook.com/"> <svg width="24" height="24">
+				<use xlink:href="./svg/sprite.svg#facebook"></use>
+			</svg></a>
+			
 		</div>
 		
 		<div class="side-menu flex">
 			
 			<span class="logo flex">
 				<svg width="130" height="47">
-					<use xlink:href="./svg/sprite.svg#logo-blue"></use>
+					<use xlink:href="./svg/sprite.svg#logo"></use>
 				</svg>
 				<svg width="130" height="7">
-					<use xlink:href="./svg/sprite.svg#logo-text-blue"></use>
+					<use xlink:href="./svg/sprite.svg#logo-text"></use>
 				</svg>
 			</span>
 			<div class="page-name">
 				<span>
-				<svg width="12" height="26">
+				<svg class="slash" width="12" height="26">
 					<use xlink:href="./svg/sprite.svg#slash"></use>
 				</svg>
 					<text style fill="white" y="30">
@@ -100,15 +102,15 @@
 					
 					<hr>
 					<span>
-						<a href="#"> <svg width="38" height="38">
-						<use xlink:href="./svg/sprite.svg#facebook-blue"></use>
+						<a href="https://uk-ua.facebook.com/"> <svg width="38" height="38">
+						<use xlink:href="./svg/sprite.svg#facebook"></use>
 					</svg></a>
-					<text>
-						Our page on facebook
-					</text>
+						
+						<a href="https://uk-ua.facebook.com/">Our page on facebook</a>
+					
 			    </span>
 				</div>
-				<div class="form">
+				<div class="form" data-aos="zoom-in">
 					<form>
 						<h2>We would like to help you</h2>
 						<input class="input" placeholder="Name" required type="text" maxlength="40">
@@ -142,9 +144,9 @@
 					</a>
 				</div>
 				<div class="contacts">
-					<svg width="24" height="24">
-						<use xlink:href="./svg/sprite.svg#facebook-blue"></use>
-					</svg>
+					<a href="https://uk-ua.facebook.com/"><svg width="38" height="38">
+						<use xlink:href="./svg/sprite.svg#facebook"></use>
+					</svg> </a>
 					<span class="dot"></span>
 					<h4><a href="tel:+3806600211927">066 021 1927</a></h4>
 					<span class="dot"></span>
@@ -160,5 +162,10 @@
 		</div>
 	</div>
 </footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+	AOS.init();
+</script>
 </body>
 </html>

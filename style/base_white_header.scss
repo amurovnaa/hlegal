@@ -123,7 +123,8 @@ header {
   z-index: 10;
   margin: 0 auto;
   max-width: 1720px;
-background-color: $basic-white;
+  background-color: $basic-white;
+
   .contact-side {
     background-color: rgb(255 255 255 / 20%);
     padding: 10px 15px;
@@ -196,6 +197,9 @@ background-color: $basic-white;
       font-size: 20px;
       font-weight: 400;
 
+      text {
+        align-self: center;
+      }
     }
   }
 }
@@ -329,6 +333,14 @@ input[type=checkbox] {
       justify-content: left;
       gap: 6px;
 
+      svg {
+        color: $grey-text;
+      }
+
+      svg:hover {
+        color: $accent;
+      }
+
       .dot, .address, svg, {
         display: flex;
       }
@@ -356,21 +368,28 @@ input[type=checkbox] {
 
       .page-name {
         position: absolute;
-        bottom: 75px;
-        left: 195px
+        bottom: 67px;
+        left: 195px;
+        display: flex;
+        flex-direction: row;
+      }
+
+      text {
+        font-size: 36px;
+        font-weight: 400;
+      }
+
+      .slash {
+        width: 21px;
+        height: 47px;
       }
 
       .logo {
         width: 130px;
         height: 60px;
 
-        .page-name {
-          display: flex;
-          flex-direction: row;
-        }
       }
     }
-
 
     .header-links {
       display: flex;
@@ -413,19 +432,19 @@ input[type=checkbox] {
       padding: 16px 0 0 0;
       align-items: end;
 
-      .page-name {
-        bottom: 25px;
-      }
-
       .logo {
         position: absolute;
         top: 50px;
         left: 60px;
       }
+
+      .page-name {
+        bottom: 20px;
+
+      }
     }
   }
 }
-
 
 
 

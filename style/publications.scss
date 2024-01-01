@@ -22,25 +22,7 @@ body {
 
 }
 
-header {
-  @media (min-width: 762px) {
-    padding-bottom: 60px;
-    .side-menu {
-      .page-name {
-        bottom: 130px;
-      }
-    }
-  }
-  @media (min-width: 992px) {
-    padding-bottom: 60px;
-    .side-menu {
-      .page-name {
-        bottom: 84px;
-      }
-    }
 
-  }
-}
 
 .publications {
   background: $grey-bg;
@@ -79,8 +61,11 @@ header {
         font-weight: 700;
         background: transparent;
         cursor: pointer;
-
-        &:active, &:hover {
+        &:hover{
+          border-radius: 10px;
+          background: $grey-bg;
+        }
+        &:active{
           border-radius: 10px;
           background: $basic-white;
         }

@@ -350,7 +350,12 @@ input[type=checkbox] {
       padding: 0;
       justify-content: left;
       gap: 6px;
-
+      svg{
+        color: $basic-white;
+      }
+      svg:hover{
+        color: $accent;
+      }
       .dot, .address, svg, {
         display: flex;
       }
@@ -367,6 +372,8 @@ input[type=checkbox] {
         color: $grey-text;
         font-size: 16px;
         font-weight: 400;
+
+
       }
     }
 

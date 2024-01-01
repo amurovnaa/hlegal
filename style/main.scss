@@ -44,7 +44,11 @@
     }
 
     svg {
+      color: $basic-white;
       margin-bottom: 30px;
+    }
+    svg:hover{
+      color: $accent;
     }
   }
 }
@@ -83,6 +87,10 @@
       &.ui-tabs-active {
         border-color: $accent;
         @extend .gradient-red-reversed;
+      }
+
+      &:hover {
+        color: $accent;
       }
 
       a {
@@ -317,8 +325,22 @@
 
   .container {
     padding: 0;
-    @media (min-width: 1440px) {
+    @media (min-width: 1520px) {
       padding: 0 100px;
+      .grid{
+        &:first-child {
+          border-top-left-radius: 12px;
+        }
+        &:nth-of-type(3) {
+          border-top-right-radius: 12px;
+        }
+        &:nth-of-type(10) {
+          border-bottom-left-radius: 12px;
+        }
+        &:last-child {
+          border-bottom-right-radius: 12px;
+        }
+      }
     }
   }
 
@@ -336,22 +358,22 @@
     }
 
     @media (min-width: 763px) {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
     }
     @media (min-width: 992px) {
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 }
 
 .section-publications {
-
   padding: 30px 0 0 0;
 
   h3 {
     cursor: pointer;
     color: $active-regular;
-    &:hover{
+
+    &:hover {
       color: $accent;
     }
   }
@@ -418,7 +440,8 @@
     color: $active-regular;
     text-align: left;
     cursor: pointer;
-    &:hover{
+
+    &:hover {
       color: $accent;
     }
   }
@@ -488,12 +511,11 @@
 
   .section-team {
     .flex {
-      max-height: 300px;
+      min-height: 300px;
 
       img {
         border-radius: 12px 0 0 12px;
-        max-height: 300px;
-        max-width: 30%;
+        max-width: 50%;
       }
     }
   }
@@ -507,8 +529,13 @@
     }
 
   }
-}
 
+  .section-team {
+    img {
+      max-width: 30%;
+    }
+  }
+}
 
 
 

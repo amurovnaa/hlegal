@@ -79,8 +79,11 @@ footer {
     align-items: center;
 
     svg {
-      path:hover {
-        fill: $accent;
+      max-width: 100%;
+      height: auto;
+      color: $active-regular;
+      &:hover {
+        color: $accent;
       }
     }
 
@@ -147,16 +150,13 @@ footer {
       margin-bottom: 0;
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
 
 
       .address {
-        align-items: flex-start;
         flex-direction: row;
       }
 
       .contacts {
-        align-items: flex-start;
         flex-direction: row;
       }
     }

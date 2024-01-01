@@ -89,22 +89,30 @@ body {
       gap: 10px;
       height: 38px;
       align-items: center;
+
+      a:last-of-type {
+        width: 105px;
+        color: $active-regular;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        cursor: pointer;
+
+        &:hover {
+          color: $accent;
+        }
+      }
     }
-  }
 
-  text {
-    color: $active-regular;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 16px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    width: 105px;
-    cursor: pointer;
 
-    &:hover {
-      color: $accent;
+    svg {
+      color: $active-regular;
+
+      &:hover {
+        color: $accent;
+      }
     }
   }
 }
@@ -129,7 +137,7 @@ form {
     line-height: 1;
     font-size: 30px;
     font-weight: 700;
-    background: var(--Gradient-Red-Text, linear-gradient(90deg, #F0145A 0.84%, #EF8080 99.96%));
+    background: $gradient-red-text;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -148,13 +156,13 @@ form {
     line-height: 26px;
     margin-bottom: 15px;
     border-radius: 8px;
-    background: $basic-white;
+    background-color: $basic-white;
     border: 1px solid $basic-white;
 
     &:disabled {
       border-radius: 8px;
       border: 1px solid $grey-bg-alt;
-      background: $grey-bg-alt;
+      background-color: $grey-bg-alt;
     }
 
     &:focus {
@@ -164,11 +172,8 @@ form {
     }
 
     &:invalid {
-      border-radius: 8px;
-      border: 1px solid #F00;
-      color: #F00;
-    }
 
+    }
   }
 
   textarea {
