@@ -139,7 +139,7 @@ header {
     text-align: center;
     align-content: center;
 
-    .dot, .address, svg {
+    .dot, .address, svg, .facebook-link {
       display: none;
     }
 
@@ -183,7 +183,6 @@ header {
       height: 32px;
     }
 
-
     span {
       display: flex;
       color: $basic-white;
@@ -199,11 +198,6 @@ header {
   right: 15px;
   z-index: 5;
   cursor: pointer;
-
-  &:hover {
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.20);
-  }
 
   span {
     height: 2.5px;
@@ -231,10 +225,6 @@ header {
       transition: all .2s ease-in-out;
     }
   }
-
-  &:hover span, &:hover span:before, &:hover span:after {
-
-  }
 }
 
 #overlay-input:checked ~ .header-links {
@@ -248,7 +238,7 @@ header {
   left: 2%;
   border-radius: 12px 12px 0 0;
   z-index: 2;
-  padding: 0 12px 12px;
+  padding: 12px;
 
   ul {
     position: absolute;
@@ -269,11 +259,6 @@ header {
       padding: 4px 0;
       font-weight: 700;
     }
-
-    li:hover, li:active {
-      color: $accent;
-
-    }
   }
 }
 
@@ -285,9 +270,13 @@ input[type=checkbox] {
 
   }
 
-  &:checked ~ .header-links .overlay-close-button {
-
-
+  &:checked ~ #overlay-button {
+    position: absolute;
+    right: 5%;
+    top: 342px;
+    @media (min-width: 414px) {
+      top: 570px;
+    }
     &:hover span, span {
       background: transparent;
     }
@@ -306,7 +295,6 @@ input[type=checkbox] {
     }
   }
 }
-
 
 .first {
   display: flex;

@@ -115,7 +115,7 @@ header .contact-side {
 header .contact-side a {
   color: #B3B3BA;
 }
-header .contact-side .dot, header .contact-side .address, header .contact-side svg {
+header .contact-side .dot, header .contact-side .address, header .contact-side svg, header .contact-side .facebook-link {
   display: none;
 }
 header .contact-side .language-btn {
@@ -175,14 +175,10 @@ header .side-menu span text {
   z-index: 5;
   cursor: pointer;
 }
-#overlay-button:hover {
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.2);
-}
 #overlay-button span {
   height: 2.5px;
   width: 30px;
-  background-color: #323264;
+  background-color: #000;
   position: relative;
   display: block;
   transition: all 0.2s ease-in-out;
@@ -197,11 +193,12 @@ header .side-menu span text {
 #overlay-button span:before, #overlay-button span:after {
   height: 3px;
   width: 30px;
-  background-color: #323264;
+  background-color: #000;
   position: absolute;
   content: "";
   transition: all 0.2s ease-in-out;
 }
+
 #overlay-input:checked ~ .header-links {
   display: flex;
   height: 351px;
@@ -213,7 +210,7 @@ header .side-menu span text {
   left: 2%;
   border-radius: 12px 12px 0 0;
   z-index: 2;
-  padding: 0 12px 12px;
+  padding: 12px;
 }
 #overlay-input:checked ~ .header-links ul {
   position: absolute;
@@ -234,8 +231,9 @@ header .side-menu span text {
   padding: 4px 0;
   font-weight: 700;
 }
-#overlay-input:checked ~ .header-links ul li:hover, #overlay-input:checked ~ .header-links ul li:active {
+#overlay-input:checked ~ .header-links ul li:hover {
   color: #F0145A;
+  border-bottom: solid 2px;
 }
 
 input[type=checkbox] {
@@ -244,15 +242,25 @@ input[type=checkbox] {
 input[type=checkbox]:checked ~ #overlay {
   visibility: visible;
 }
-input[type=checkbox]:checked ~ .header-links .overlay-close-button:hover span, input[type=checkbox]:checked ~ .header-links .overlay-close-button span {
+input[type=checkbox]:checked ~ #overlay-button {
+  position: absolute;
+  right: 5%;
+  top: 342px;
+}
+@media (min-width: 414px) {
+  input[type=checkbox]:checked ~ #overlay-button {
+    top: 570px;
+  }
+}
+input[type=checkbox]:checked ~ #overlay-button:hover span, input[type=checkbox]:checked ~ #overlay-button span {
   background: transparent;
 }
-input[type=checkbox]:checked ~ .header-links .overlay-close-button span:before {
+input[type=checkbox]:checked ~ #overlay-button span:before {
   background: #EC6F5D;
   transform: rotate(45deg) translate(7px, 7px);
   opacity: 1;
 }
-input[type=checkbox]:checked ~ .header-links .overlay-close-button span:after {
+input[type=checkbox]:checked ~ #overlay-button span:after {
   background: #EC6F5D;
   transform: rotate(-45deg) translate(7px, -7px);
 }

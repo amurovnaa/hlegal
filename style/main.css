@@ -116,7 +116,7 @@ header .contact-side {
   text-align: center;
   align-content: center;
 }
-header .contact-side .dot, header .contact-side .address, header .contact-side svg {
+header .contact-side .dot, header .contact-side .address, header .contact-side svg, header .contact-side .facebook-link {
   display: none;
 }
 header .contact-side .language-btn {
@@ -166,10 +166,6 @@ header .side-menu span {
   z-index: 5;
   cursor: pointer;
 }
-#overlay-button:hover {
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.2);
-}
 #overlay-button span {
   height: 2.5px;
   width: 30px;
@@ -193,6 +189,7 @@ header .side-menu span {
   content: "";
   transition: all 0.2s ease-in-out;
 }
+
 #overlay-input:checked ~ .header-links {
   display: flex;
   height: 351px;
@@ -204,7 +201,7 @@ header .side-menu span {
   left: 2%;
   border-radius: 12px 12px 0 0;
   z-index: 2;
-  padding: 0 12px 12px;
+  padding: 12px;
 }
 #overlay-input:checked ~ .header-links ul {
   position: absolute;
@@ -225,9 +222,6 @@ header .side-menu span {
   padding: 4px 0;
   font-weight: 700;
 }
-#overlay-input:checked ~ .header-links ul li:hover, #overlay-input:checked ~ .header-links ul li:active {
-  color: #F0145A;
-}
 
 input[type=checkbox] {
   display: none;
@@ -235,15 +229,25 @@ input[type=checkbox] {
 input[type=checkbox]:checked ~ #overlay {
   visibility: visible;
 }
-input[type=checkbox]:checked ~ .header-links .overlay-close-button:hover span, input[type=checkbox]:checked ~ .header-links .overlay-close-button span {
+input[type=checkbox]:checked ~ #overlay-button {
+  position: absolute;
+  right: 5%;
+  top: 342px;
+}
+@media (min-width: 414px) {
+  input[type=checkbox]:checked ~ #overlay-button {
+    top: 570px;
+  }
+}
+input[type=checkbox]:checked ~ #overlay-button:hover span, input[type=checkbox]:checked ~ #overlay-button span {
   background: transparent;
 }
-input[type=checkbox]:checked ~ .header-links .overlay-close-button span:before {
+input[type=checkbox]:checked ~ #overlay-button span:before {
   background: #EC6F5D;
   transform: rotate(45deg) translate(7px, 7px);
   opacity: 1;
 }
-input[type=checkbox]:checked ~ .header-links .overlay-close-button span:after {
+input[type=checkbox]:checked ~ #overlay-button span:after {
   background: #EC6F5D;
   transform: rotate(-45deg) translate(7px, -7px);
 }
