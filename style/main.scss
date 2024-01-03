@@ -8,6 +8,22 @@
   color: transparent;
 }
 
+
+#overlay-input:checked ~ .header-links {
+  li:nth-child(2) {
+    color: $accent;
+  }
+}
+
+@media (min-width: 762px) {
+  .header-links {
+    li:nth-child(2) {
+      color: $accent;
+      border-bottom: solid 2px;
+    }
+  }
+}
+
 .section-1 {
   display: flex;
   align-items: end;
@@ -47,7 +63,8 @@
       color: $basic-white;
       margin-bottom: 30px;
     }
-    svg:hover{
+
+    svg:hover {
       color: $accent;
     }
   }
@@ -327,16 +344,19 @@
     padding: 0;
     @media (min-width: 1520px) {
       padding: 0 100px;
-      .grid{
+      .grid {
         &:first-child {
           border-top-left-radius: 12px;
         }
+
         &:nth-of-type(3) {
           border-top-right-radius: 12px;
         }
+
         &:nth-of-type(10) {
           border-bottom-left-radius: 12px;
         }
+
         &:last-child {
           border-bottom-right-radius: 12px;
         }

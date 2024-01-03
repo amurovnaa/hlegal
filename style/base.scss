@@ -154,7 +154,15 @@ header {
       letter-spacing: 1px;
       text-align: center;
 
+      &:last-of-type {
+        background: $accent;
+      }
+
       &:hover {
+        background: rgba(255, 255, 255, 0.20);
+      }
+
+      &:active {
         background: $accent;
       }
     }
@@ -258,6 +266,9 @@ header {
       font-size: 24px;
       padding: 4px 0;
       font-weight: 700;
+    }
+    li:hover {
+      background: $grey-separator;
     }
   }
 }
@@ -404,10 +415,13 @@ input[type=checkbox] {
       }
 
       li:hover {
+        color: $basic-white;
+        border-bottom: solid 2px;
+      }
+      li:active{
         color: $accent;
         border-bottom: solid 2px;
       }
-
     }
   }
 }

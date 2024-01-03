@@ -130,7 +130,13 @@ header .contact-side .language-btn {
   letter-spacing: 1px;
   text-align: center;
 }
+header .contact-side .language-btn:last-of-type {
+  background: #F0145A;
+}
 header .contact-side .language-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+header .contact-side .language-btn:active {
   background: #F0145A;
 }
 header .contact-side h4 {
@@ -221,6 +227,9 @@ header .side-menu span {
   font-size: 24px;
   padding: 4px 0;
   font-weight: 700;
+}
+#overlay-input:checked ~ .header-links ul li:hover {
+  background: #E6E6F0;
 }
 
 input[type=checkbox] {
@@ -343,6 +352,10 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
     font-weight: 700;
   }
   header .header-links li:hover {
+    color: #FFF;
+    border-bottom: solid 2px;
+  }
+  header .header-links li:active {
     color: #F0145A;
     border-bottom: solid 2px;
   }
@@ -491,6 +504,16 @@ footer .footer-left-side p {
   color: transparent;
 }
 
+#overlay-input:checked ~ .header-links li:nth-child(2) {
+  color: #F0145A;
+}
+
+@media (min-width: 762px) {
+  .header-links li:nth-child(2) {
+    color: #F0145A;
+    border-bottom: solid 2px;
+  }
+}
 .section-1 {
   display: flex;
   align-items: end;

@@ -153,13 +153,26 @@ header {
       letter-spacing: 1px;
       text-align: center;
 
-      &:hover {
+      &:last-of-type {
         background: $accent;
-
-        a {
-          color: $basic-white;
-        }
       }
+
+      &:last-of-type a {
+        color: $basic-white;
+      }
+
+      &:hover {
+        background: $grey-bg;
+      }
+
+      &:active {
+        background: $accent;
+      }
+
+      &:active a {
+        color: $basic-white;
+      }
+
     }
 
     h4 {
@@ -273,8 +286,7 @@ header {
       font-weight: 700;
     }
     li:hover {
-      color: $accent;
-      border-bottom: solid 2px;
+      background: $grey-separator;
     }
   }
 }
@@ -406,10 +418,15 @@ input[type=checkbox] {
         font-size: 16px;
         font-weight: 700;
       }
+
       li:hover {
-        color: $accent;
+        color: $active-regular;
         border-bottom: solid 2px;
       }
+      li:active{
+         color: $accent;
+         border-bottom: solid 2px;
+       }
     }
   }
 }

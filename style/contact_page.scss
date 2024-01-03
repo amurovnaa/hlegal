@@ -21,6 +21,21 @@ body {
 
 }
 
+#overlay-input:checked ~ .header-links {
+  li:last-of-type {
+    color: $accent;
+  }
+}
+
+@media (min-width: 762px) {
+  .header-links {
+    li:last-of-type {
+      color: $accent;
+      border-bottom: solid 2px;
+    }
+  }
+}
+
 .section-contact {
   margin-top: 133px;
   @media (min-width: 762px) {
