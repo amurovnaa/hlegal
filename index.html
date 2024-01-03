@@ -17,11 +17,10 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"
 	      integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
 	      crossorigin="anonymous" referrerpolicy="no-referrer"/>
-	
-	
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<link rel="stylesheet" href="style/main.css">
 	<title>Hlegal</title>
-	<link rel="icon" type="image/x-icon" href="">
+	<link rel="icon" type="image/x-icon" href="./img/favicon.ico">
 </head>
 <body>
 <main>
@@ -95,10 +94,11 @@
 				</a>
 			</div>
 		</section>
-		<section class="section-tabs" id="next-section">
+		<section class="section-tabs" data-aos="fade-up"
+		         data-aos-duration="2000" id="next-section">
 			<div class="container">
-				<div class="tabs">
-					<ul>
+				<div class="tabs" >
+					<ul >
 						<li><a href="#tabs-1">Consistent</a></li>
 						<li><a href="#tabs-2">Customer oriented</a></li>
 						<li><a href="#tabs-3">Innovative</a></li>
@@ -388,7 +388,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
         integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+	AOS.init();
+</script>
 <script>
 	$(document).ready(function () {
 		$('.slider').slick({
