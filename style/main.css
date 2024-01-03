@@ -498,6 +498,10 @@ footer .footer-left-side p {
     justify-content: flex-end;
   }
 }
+html {
+  scroll-behavior: smooth;
+}
+
 .gradient-red-reversed, .section-tabs .tabs li.ui-tabs-active {
   background-image: linear-gradient(90deg, #EF8080 0.84%, #F0145A 99.96%);
   background-clip: text;

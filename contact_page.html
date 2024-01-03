@@ -41,10 +41,12 @@
 			<span class="dot"></span>
 			<h4><a href="tel:+3806600211927">066 021 1927</a></h4>
 			<span class="dot"></span>
-			<a class="facebook-link" href="https://uk-ua.facebook.com/"> <svg width="24" height="24">
-				<use xlink:href="./svg/sprite.svg#facebook"></use>
-			</svg></a>
-			
+			<a class="facebook-link" href="https://uk-ua.facebook.com/">
+				<svg width="24" height="24">
+					<use xlink:href="./svg/sprite.svg#facebook"></use>
+				</svg>
+			</a>
+		
 		</div>
 		
 		<div class="side-menu flex">
@@ -114,13 +116,24 @@
 					<form>
 						<h2>We would like to help you</h2>
 						<input class="input" placeholder="Name" required type="text" maxlength="40">
-						<textarea class="input" placeholder="Message" maxlength="500"></textarea>
+						<textarea class="input" placeholder="Message" required typeof="text" minlength="5" maxlength="500" ></textarea>
 						<h3 class="caps">How to answer you?</h3>
-						<input class="input" placeholder="Phone number" required type="tel" maxlength="40" pattern="^\+?3?8?(0[3-6][1-8]\d{7})$">
-						<input class="input" placeholder="Email" required type="email" maxlength="40"
+						<input class="input" placeholder="Phone number" required type="tel" minlength="10" maxlength="40"
+						       pattern="^\+?3?8?(0[3-6][1-8]\d{7})$">
+						<input class="input" placeholder="Email" required type="email" minlength="10" maxlength="40"
 						       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"/>
 						<div class="button-flex">
-							<button class="form-btn" type="submit">Send message</button>
+							<div class="row">
+								<div class="progress-btn" data-progress-style="indefinite-circle">
+									<button class="btn" type="submit">Send message</button>
+									<svg class="progress circle-loader" style="width: 50px; height: 50px"
+									     xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50"
+									     fill="none">
+										
+										<circle cx="25" cy="25" r="13"></circle>
+									</svg>
+								</div>
+							</div>
 						</div>
 					</form>
 				</div>
@@ -144,9 +157,11 @@
 					</a>
 				</div>
 				<div class="contacts">
-					<a href="https://uk-ua.facebook.com/"><svg width="38" height="38">
-						<use xlink:href="./svg/sprite.svg#facebook"></use>
-					</svg> </a>
+					<a href="https://uk-ua.facebook.com/">
+						<svg width="38" height="38">
+							<use xlink:href="./svg/sprite.svg#facebook"></use>
+						</svg>
+					</a>
 					<span class="dot"></span>
 					<h4><a href="tel:+3806600211927">066 021 1927</a></h4>
 					<span class="dot"></span>
@@ -162,10 +177,30 @@
 		</div>
 	</div>
 </footer>
-
+<script
+	  src="https://code.jquery.com/jquery-3.7.1.min.js"
+	  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+	  crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
 	AOS.init();
+</script>
+
+
+<script>
+	$(document).ready(function () {
+		$(".progress-btn").on("click", function () {
+			var progressBtn = $(this);
+			
+			if (!progressBtn.hasClass("active")) {
+				progressBtn.addClass("active");
+				setTimeout(function () {
+					progressBtn.removeClass("active");
+				}, 10000);
+			}
+		})
+	});
 </script>
 </body>
 </html>

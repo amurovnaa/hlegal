@@ -1,6 +1,10 @@
 @import "../style/base";
 @import "../style/footer";
 
+html {
+  scroll-behavior: smooth;
+
+}
 
 .gradient-red-reversed {
   background-image: linear-gradient(90deg, #EF8080 0.84%, #F0145A 99.96%);
