@@ -188,10 +188,12 @@ form {
       border: 1px solid $active-regular;
       color: $basic-black;
     }
+    /*
     &:invalid {
       border: 1px solid red;
+      color: red;
     }
-
+    */
   }
 
   textarea {
@@ -353,10 +355,10 @@ form {
 
   @keyframes progress-anim {
     0% {
-      width: 0%;
+      width: 0;
     }
     5% {
-      width: 0%;
+      width: 0;
     }
     10% {
       width: 15%;
@@ -374,16 +376,16 @@ form {
       width: 100%;
     }
     100% {
-      width: 0%;
+      width: 0;
     }
   }
 
   @keyframes progress-indefinite-anim {
     0% {
-      background-position: 0% 0%;
+      background-position: 0 0;
     }
     100% {
-      background-position: 100% 0%;
+      background-position: 100% 0;
     }
   }
 

@@ -668,6 +668,12 @@ form input, form textarea {
   border-radius: 8px;
   background-color: #FFF;
   border: 1px solid #FFF;
+  /*
+  &:invalid {
+    border: 1px solid red;
+    color: red;
+  }
+  */
 }
 form input:disabled, form textarea:disabled {
   border-radius: 8px;
@@ -678,9 +684,6 @@ form input:focus, form input:valid, form textarea:focus, form textarea:valid {
   border-radius: 8px;
   border: 1px solid #24A3FF;
   color: #000;
-}
-form input:invalid, form textarea:invalid {
-  border: 1px solid red;
 }
 form textarea {
   height: 130px;
@@ -816,10 +819,10 @@ form .circle-loader {
 }
 @keyframes progress-anim {
   0% {
-    width: 0%;
+    width: 0;
   }
   5% {
-    width: 0%;
+    width: 0;
   }
   10% {
     width: 15%;
@@ -837,15 +840,15 @@ form .circle-loader {
     width: 100%;
   }
   100% {
-    width: 0%;
+    width: 0;
   }
 }
 @keyframes progress-indefinite-anim {
   0% {
-    background-position: 0% 0%;
+    background-position: 0 0;
   }
   100% {
-    background-position: 100% 0%;
+    background-position: 100% 0;
   }
 }
 
