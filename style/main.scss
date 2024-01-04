@@ -19,15 +19,6 @@ html {
   }
 }
 
-@media (min-width: 762px) {
-  .header-links {
-    li:nth-child(2) {
-      color: $accent;
-      border-bottom: solid 2px;
-    }
-  }
-}
-
 .section-1 {
   display: flex;
   align-items: end;
